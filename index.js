@@ -27,17 +27,28 @@ function removeDice() {
 function rollDice() {
     let result = 0;
     const dices = document.getElementById("dices");
-    
+
     for (let i = 0; i < diceAmount; i++) {
         let diceResult = Math.floor((Math.random() * 6 + 1));
-        dices.children[i].innerHTML = diceIcons[diceResult - 1];
+        let diceElement = dices.children[i];
+
+        diceElement.innerHTML = diceIcons[diceResult - 1];
+        diceElement.classList.add("roll");
+
         result += diceResult;
     }
+
+    setTimeout(() => {
+        for (let i = 0; i < diceAmount; i++) {
+            dices.children[i].classList.remove("roll");
+        }
+    }, 200);
 
     const resultField = document.getElementById("results");
     const resultText = document.createElement("div");
     resultText.classList.add("resultItem");
-    resultText.innerHTML = 'You rolled <span id="result">' + result + '</span>';
+    resultText.innerHTML = 'You rolled <span id="result">' + result + '</span>' +
+                            ' with ' + diceAmount + ' dice';
     resultField.appendChild(resultText);
 
     if (resultField.children.length > 4) {

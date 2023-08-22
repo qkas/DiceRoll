@@ -125,17 +125,35 @@ button {
 
 #result {
     font-weight: bold;
-    font-size: 22px;
-    text-shadow: 1px 1px #00aeff;
+    font-size: 19px;
+    text-shadow: 1px 1px #0091d4;
 }
 
 #results {
     margin-top: 20px;
-    font-size: 20px;
+    font-size: 18px;
     color: grey;
 }
 
 .resultItem:last-child {
     color: white;
+    font-size: 22px;
 }
 
+.resultItem:last-child #result {
+    font-size: 23px;
+    text-shadow: 1px 1px #00aeff;
+}
+
+@keyframes roll {
+    0% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.dice.roll {
+    animation: roll 0.2s;
+}
