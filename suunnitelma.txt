@@ -1,0 +1,21 @@
+diceamount = 1;
+add-button.onclick removes hide class from dice & diceamount++
+remove-button.onclick adds hide class to dice & diceamount--
+
+if diceamount == 1
+    add .grey to remove-button
+
+if diceamount == 6 
+    add .grey to add-button
+
+throw-button.onclick:
+    calculateResult function:
+    let result = 0;
+    for (let i = 0; i < diceamount; i++) {
+        result + randomnum[1-6]
+    }
+    showResult function
+
+showResult fuction:
+    add result to result span
+    remove hide class from results div

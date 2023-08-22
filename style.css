@@ -42,7 +42,7 @@ h2 {
 
 #dices {
     display: flex;
-    justify-content: start;
+    justify-content: center;
     margin: 0 10px;
     font-size: 60px;
     color: rgb(255, 100, 100);
@@ -54,8 +54,13 @@ h2 {
 }
 
 .dice {
-    transition: 0.2s;
     margin: 0px 3px;
+}
+
+@media (max-width: 400px) {
+    .dice {
+        font-size: 55px;
+    }
 }
 
 .hide {
@@ -138,6 +143,7 @@ button {
 .resultItem:last-child {
     color: white;
     font-size: 22px;
+    margin-top: 3px;
 }
 
 .resultItem:last-child #result {
@@ -156,4 +162,11 @@ button {
 
 .dice.roll {
     animation: roll 0.2s;
+}
+
+.unavailable {
+    animation: none;
+    cursor: default;
+    color: #fff;
+    background-color: #5a5a5a;
 }

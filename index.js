@@ -51,7 +51,7 @@ function rollDice() {
                             ' with ' + diceAmount + ' dice';
     resultField.appendChild(resultText);
 
-    if (resultField.children.length > 4) {
+    if (resultField.children.length > 7) {
         resultField.firstChild.remove();
     }
 }
