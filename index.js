@@ -5,6 +5,14 @@ const diceIcons = ['<i class="fa-solid fa-dice-one"></i>', '<i class="fa-solid f
 '<i class="fa-solid fa-dice-three"></i>', '<i class="fa-solid fa-dice-four"></i>',
 '<i class="fa-solid fa-dice-five"></i>', '<i class="fa-solid fa-dice-six"></i>']
 
+function updateButtons() {
+    const addButton = document.getElementById("add-button");
+    const removeButton = document.getElementById("remove-button");
+
+    addButton.disabled = diceAmount === 6;
+    removeButton.disabled = diceAmount === 1;
+}
+
 function addDice() {
     if (diceAmount < 6) {
         const dices = document.getElementById("dices");
@@ -13,6 +21,7 @@ function addDice() {
         dice.classList.add("dice");
         dices.appendChild(dice);
         diceAmount++;
+        updateButtons();
     }
 }
 
@@ -21,6 +30,7 @@ function removeDice() {
         const lastDice = document.getElementById("dices").lastChild;
         lastDice.remove();
         diceAmount--;
+        updateButtons()
     }
 }
 
@@ -55,3 +65,5 @@ function rollDice() {
         resultField.firstChild.remove();
     }
 }
+
+updateButtons()

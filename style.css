@@ -164,9 +164,16 @@ button {
     animation: roll 0.2s;
 }
 
-.unavailable {
-    animation: none;
+button:disabled {
     cursor: default;
-    color: #fff;
-    background-color: #5a5a5a;
+    pointer-events: none;
+    user-select: none;
+}
+
+#add-button:disabled {
+    background: rgb(80, 80, 80);
+}
+
+#remove-button:disabled {
+    background: rgb(80, 80, 80);
 }
