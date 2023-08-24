@@ -63,6 +63,12 @@ h2 {
     }
 }
 
+@media (max-width: 375px) {
+    .dice {
+        font-size: 50px;
+    }
+}
+
 .hide {
     display: none;
 }
