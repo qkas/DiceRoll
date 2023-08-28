@@ -69,11 +69,6 @@ h2 {
     display: flex;
 }
 
-.dice:hover {
-    animation: shake 0.5s;
-    animation-iteration-count: infinite;
-}
-
 .buttons {
     display: flex;
     justify-content: space-around;
@@ -105,17 +100,24 @@ button {
     flex-grow: 0.8;
 }
 
-#add-button:hover {
-    background: rgb(95, 200, 95);
-}
-
-#remove-button:hover {
-    background: rgb(255, 120, 120);
-}
-
-#roll-button:hover {
-    animation: shake 0.5s;
-    animation-iteration-count: infinite;
+@media (min-width: 768px) {
+    .dice:hover {
+        animation: shake 0.5s;
+        animation-iteration-count: infinite;
+    }
+    
+    #add-button:hover {
+        background: rgb(95, 200, 95);
+    }
+    
+    #remove-button:hover {
+        background: rgb(255, 120, 120);
+    }
+    
+    #roll-button:hover {
+        animation: shake 0.5s;
+        animation-iteration-count: infinite;
+    }
 }
 
 @keyframes shake {
