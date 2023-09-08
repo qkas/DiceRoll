@@ -9,16 +9,40 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
-h1 {
+.top-nav {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.top-nav a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    text-shadow: 2px 2px #00aeff;
+    margin: 0 20px;
+}
+
+.top-nav h1 {
     font-size: 50px;
+    margin: 0;
+    width: 250px;
 }
 
 a {
     text-decoration: none;
     color: #fff;
     text-shadow: 2px 2px #00aeff;
+}
+
+a i {
+    margin: 0px 20px;
 }
 
 h2 {
@@ -29,13 +53,13 @@ h2 {
 
 .wrapper {
     text-align: center;
-    width: 400px;
+    width: 500px;
+    margin: 0 20px;
 }
 
 #dices {
     display: flex;
     justify-content: center;
-    margin: 0 10px;
     font-size: 60px;
     color: rgb(255, 100, 100);
     background: rgba(255, 255, 255, 0.05);
@@ -49,15 +73,27 @@ h2 {
     margin: 0px 3px;
 }
 
+@media (max-width: 500px) {
+    h1 {
+        margin: 40px 30px;
+    }
+}
+
 @media (max-width: 400px) {
     .dice {
         font-size: 55px;
+    }
+    h1 {
+        margin: 40px 10px;
     }
 }
 
 @media (max-width: 375px) {
     .dice {
         font-size: 50px;
+    }
+    h1 {
+        margin: 40px 0px;
     }
 }
 
@@ -92,7 +128,7 @@ button {
 }
 
 #remove-button {
-    background: rgb(255, 100, 100);;
+    background: rgb(255, 100, 100);
 }
 
 #roll-button {
