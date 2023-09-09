@@ -12,26 +12,25 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section class="wrapper">
+    <div class="wrapper">
         <nav class="top-nav">
             <a href="https://qkas.github.io/"><i class="fa fa-undo"></i></a>
             <a href="https://qkas.github.io/DiceRoll/"><h1>DiceRoll</h1></a>
             <a href="https://qkas.github.io/WordGuess/"><i class="fa fa-angle-right"></i></a>
         </nav>
         <h2>LETS ROLL DICE</h2>
-        <div id="dices">
+        <section id="dices">
             <div class="dice"><i class="fa-solid fa-dice-one"></i></div>
-            <!-- more get added here -->
-        </div>
-        <div class="buttons">
+        </section>
+        <section class="buttons">
             <button id="add-button" onclick="addDice()">ADD DICE</button>
             <button id="remove-button" onclick="removeDice()">REMOVE DICE</button>
             <button id="roll-button" onclick="rollDice()">ROLL</button>
-        </div>
-        <div id="results">
+        </section>
+        <section id="results">
             
-        </div>
+        </section>
     <script src="index.js"></script>
-    </section>
+    </div>
 </body>
 </html>
